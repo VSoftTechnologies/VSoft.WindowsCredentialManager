@@ -19,6 +19,31 @@ type
  PTSTR = LPWSTR;
  PWSTR = WinApi.Windows.LPWSTR;
 
+{$IF CompilerVersion > 24.0 } //XE4 or later
+  {$LEGACYIFEND ON}
+{$IFEND}
+
+{$IF CompilerVersion < 33.0}
+type
+  NTSTATUS = LONG;
+
+const
+  { No credentials are available in the security package }
+  SEC_E_NO_CREDENTIALS = HRESULT($8009030E);
+  {$EXTERNALSYM SEC_E_NO_CREDENTIALS}
+  { The logon attempt failed }
+  SEC_E_LOGON_DENIED = HRESULT($8009030C);
+  {$EXTERNALSYM SEC_E_LOGON_DENIED}
+  { The system cannot contact a domain controller to service the authentication request. Please try again later. }
+  ERROR_DOWNGRADE_DETECTED = 1265;
+  {$EXTERNALSYM ERROR_DOWNGRADE_DETECTED}
+  { The computer you are signing into is protected by an authentication firewall. The specified account is not allowed to authenticate to the computer. }
+  ERROR_AUTHENTICATION_FIREWALL_FAILED = 1935;
+  {$EXTERNALSYM ERROR_AUTHENTICATION_FIREWALL_FAILED}
+
+
+{$IFEND}
+
 // Don't require ntstatus.h
 const
   STATUS_LOGON_FAILURE          = NTSTATUS($C000006D);
