@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/github/license/VSoftTechnologies/VSoft.WindowsCredentialManager)
 ![Lines of Code](https://tokei.rs/b1/github/VSoftTechnologies/VSoft.WindowsCredentialManager)
 
-# VSoft.WindowsCredentialManager ![GitHub release (latest by date)](https://img.shields.io/github/v/release/VSoftTechnologies/VSoft.WindowsCredentialManager) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/VSoftTechnologies/VSoft.WindowsCredentialManager/latest?sort=semver) ![GitHub Release Date](https://img.shields.io/github/release-date/VSoftTechnologies/VSoft.WindowsCredentialManager)
+# VSoft.WindowsCredentialManager ![GitHub latest Release](https://img.shields.io/github/v/release/VSoftTechnologies/VSoft.WindowsCredentialManager) ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/VSoftTechnologies/VSoft.WindowsCredentialManager/latest?sort=semver) ![GitHub Release Date](https://img.shields.io/github/release-date/VSoftTechnologies/VSoft.WindowsCredentialManager)
 
 A simple Delphi library for working with the Windows Credential Manager. 
 
