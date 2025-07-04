@@ -69,6 +69,8 @@ type
 
   end;
 
+const
+  cMaxSecretChars = 1280;
 
 implementation
 
@@ -161,13 +163,13 @@ begin
   if secret = '' then
     raise EArgumentNilException.Create('secret is required');
 
-  if (Length(secret) > 2560) then
-    raise EArgumentOutOfRangeException.Create('The secret message has exceeded 2560 bytes.');
+  if (Length(secret) > cMaxSecretChars) then
+    raise EArgumentOutOfRangeException.Create('The secret message has exceeded ' + IntToStr(cMaxSecretChars) + 'characters.');
 
   if (comment <> '') then
   begin
     // CRED_MAX_STRING_LENGTH 256
-    if Length(comment) > 255 then
+    if Length(comment) > CRED_MAX_STRING_LENGTH then
       raise EArgumentOutOfRangeException.Create('The comment message has exceeded 256 characters.');
   end;
   ZeroMemory(@newCred, SizeOf(CREDENTIAL));
